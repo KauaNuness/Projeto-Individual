@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
+/* font-family: 'Montserrat', sans-serif; */
+
 /* MENU DE CIMA */
 
 body {
@@ -8,7 +11,7 @@ body {
 
 .div_header_class .div_contanier_class {
     justify-content: space-between;
-  }
+}
 
 .div_contanier_class {
     width: 80%;
@@ -21,18 +24,31 @@ body {
 }
 
 .h1_navbar_class {
-    color: rgb(255, 176, 147);
+    color: rgb(192, 76, 33);
     width: fit-content;
     font-weight: 500;
 }
 
 .ul_navbar_class {
-    width: 350px;
+    width: 400px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     list-style: none;
     color: orangered;
+}
+
+.ul_navbar_class li a {
+    text-decoration: none;
+    color: orangered;
+    transition: 1s;
+
+}
+
+.ul_navbar_class li a:hover {
+    color: white;
+    transition: 1s;
+
 }
 
 /* BANNER PRINCIPAL  */
@@ -49,5 +65,30 @@ body {
     overflow-x: hidden;
 }
 
+/* SOBRE NÓS */
 
-  
+.h1_titulo_sobre_nos {
+    color: rgb(192, 76, 33);
+    display: flex;
+    justify-content: center;
+
+}
+
+/* SCROLLBAR */
+
+body::-webkit-scrollbar {
+    width: 10px;
+    /* largura de toda a barra de rolagem */
+}
+
+body::-webkit-scrollbar-track {
+    background: rgba(255, 68, 0, 0);
+    /* cor da área de rastreamento */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 10px;
+    border: 3px solid rgba(255, 68, 0, 0);
+    /* estilização do scroll */
+}
