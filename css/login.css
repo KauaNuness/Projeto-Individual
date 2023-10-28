@@ -1,115 +1,118 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
-/* font-family: 'Montserrat', sans-serif; */
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Montserrat;
 }
 
-body{
+body {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     min-height: 100vh;
-    background-image: url(".././assets/img/FundoJujutsu.JPG");
+    background-image: url("../assets/img/FundoOnePiece.jpg");
+    background-size: cover;
+    background-position: center;
+    
 }
 
-.login{
-    background-color: rgb(15, 15, 15);
+/* ESTILIZANDO O LOGIN */
+
+.main {
+    width: 420px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    color: #fff;
     border-radius: 10px;
-    width: 400px;
-    padding: 40px;
+    padding: 30px 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, rgba(255, 255, 255, .2));
+    backdrop-filter: blur(15px);
 }
 
-.login h2{
-    margin-bottom: 30px;
-    font-size: 30px;
-    color: orangered;
+.main h1 {
+    font-size: 36px;
     text-align: center;
 }
 
-.login .box_usuario{
+.main .input-box {
     position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
 }
 
-.login .box_usuario input{
+.input-box input {
     width: 100%;
-    padding: 10px 0;
+    height: 100%;
+    background: rgba(128, 128, 128, 0.37);
+    border: none;
     outline: none;
-    border: 0;
-    background: transparent;
-    border-bottom: 1px solid white;
-    color: white;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
     font-size: 16px;
-    margin-bottom: 30px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
 }
 
-.login .box_usuario label{
+.input-box input::placeholder {
+    color: #fff;
+}
+
+.input-box i {
     position: absolute;
-    top: 0;
-    left: 0;
-    padding: 10px 0;
-    color: rgb(192, 76, 33);
-    font-size: 16px;
-    pointer-events: none;
-    transition: .5s;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
 }
 
-.login .box_usuario input:focus~label,
-.login .box_usuario input:valid~label{
-    top: -20px;
-    left: 0;
-    color: orangered;
-    font-size: 12px;
+.main .lembrar-senha {
+    display: flex;
+    justify-content: space-between;
+    font: 14.5px;
+    margin: -15px 0 15px;
 }
 
-.forget{
-    font-size: 12px;
-    color: orangered;
-    float: right;
+.lembrar-senha label input {
+    accent-color: #fff;
+    margin-top: 3px;
 }
 
-.botao{
-    position: relative;
-    display: inline-block;
-    padding: 12px 20px;
-    color: orangered;
+.lembrar-senha a {
+    color: #fff;
     text-decoration: none;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    font-weight: 700;
-    margin-top: 20px;
-    transition: .5s;
 }
 
-.botao:hover{
-    background-color: #ff4500;
-    border-radius: 5px;
-    color: rgb(15, 15, 15);
+.lembrar-senha a:hover {
+    text-decoration: underline;
 }
 
-.botao span{
-    position: absolute;
-    display: block;
-}
-
-.botao span:nth-child(1){
-    top: 0;
-    left: -100%;
+.main .btn {
     width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, transition, #ff4500);
-    animation: botao1 1s linear infinite;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
 }
-@keyframes botao1{
-    0%{
-        left: -100%;
-    }
-    50%,
-    100%{
-        left: 100%;
-    }
+
+.main .cadastro-link {
+    font-size: 14.5;
+    text-align: center;
+    margin: 20px 0 15px;
+
+}
+
+.cadastro-link p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.cadastro-link p a:hover {
+    text-decoration: underline;
 }
