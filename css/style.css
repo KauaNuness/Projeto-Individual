@@ -1,0 +1,136 @@
+*{
+    margin-top: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("../assets/img/PlanosDeFundo/PlanoDeFundo-Index.JPG");
+    background-size: cover;
+    /* background-position: center; - não sei qual fica melhor */
+}
+
+/* BANNER */
+
+
+/* HEADER */
+
+.header{
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+padding: 20px 100px;
+background: transparent;
+backdrop-filter: blur(5px);
+display: flex;
+justify-content: space-between;
+align-items: center;
+z-index: 100;
+}
+
+.logo{
+    font-size: 32px;
+    color: aqua;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar a{
+    position: relative;
+    font-size: 18px;
+    color: aqua;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 45px;
+}
+
+.navbar a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: aqua;
+    transition: .3s;
+}
+
+.navbar a:hover::before{
+    width: 100%;
+}
+
+/* CARDS DOS MEUS AMIGOS */
+
+.card .image{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    
+}
+
+.card .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.card{
+    position: relative;
+    background-color: #000;
+    border: 3px solid aqua;
+    border-radius: 20px;
+    height: 240px;
+    top: 1000px;
+}
+
+.card .card-content{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.card .social-midia{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card .social-midia i{
+    color: #fff;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.card .social-midia i:hover{
+    color: aqua;
+}
+
+.card .nome-profissao{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+    color: #fff;
+}
+
+.nome-profissao .nome{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.nome-profissao .profissao{
+font-size: 15px;
+font-weight: 500;
+}
