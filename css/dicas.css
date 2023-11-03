@@ -28,7 +28,7 @@ body{
 
 .logo{
     font-size: 25px;
-    color: aqua;
+    color: lime;
     text-decoration: none;
     font-weight: 600;
 }
@@ -44,5 +44,135 @@ body{
 
 .navbar a:hover,
 .navbar a.ativado{
-    color: aqua;
+    color: lime;
+}
+
+/* BANNER */
+
+.banner {
+    height: fit-content;
+    padding: 40px 0;
+    color: white;
+    background-image: url("../assets/img/dicas/banner-dicas.jpeg");
+    background-size: cover;
+  }
+  
+  .banner .container {
+    height: 400px;
+    font-size: 36px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .banner p {
+    margin-left: 100px;
+    margin-top: 50px;
+    padding: 0;
+    width: 280px;
+    font-size: 36px;
+  }
+  
+  .banner .container span {
+    font-weight: 800;
+  }
+
+  /* DICAS */
+
+.container-dicas {
+  margin: 40px;
+  background-color: #121212;
+  display: flex;
+}
+
+.box img {
+  width: 280px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+.social p {
+  text-align: center;
+}
+
+.box {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box h4 {
+  color: lime;
+}
+
+.box p {
+  color: whitesmoke;
+}
+
+/* FOOTER */
+
+.container-footer{
+  background-color: black;
+}
+
+.footer-container{
+  width: 100%;
+  padding: 70px 30px 20px;
+}
+
+.social-icons{
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons a{
+  text-decoration: none;
+  padding: 10px;
+  background-color: #ededed;
+  margin: 10px;
+  border-radius: 25%;
+}
+
+.social-icons a i{
+  font-size: 2em;
+  color: #121212;
+  opacity: 0.9;
+  
+}
+
+.social-icons a:hover{
+  background-color: lime;
+  transition: 0.5s;
+}
+
+.footer{
+  margin: 30px 0;
+}
+
+.footer ul{
+  display: flex;
+  justify-content: center;
+}
+
+.footer ul li a{
+  color: #ededed;
+  margin: 20px;
+  text-decoration: none;
+  font-size: 20px;
+  transition: 0.5s;
+}
+
+.footer ul li a:hover{
+  color: lime;
+}
+
+.footerBottom{
+  background-color: black;
+  padding: 20px;
+  text-align: center;
+}
+
+.footerBottom{
+  color: #ededed;
 }

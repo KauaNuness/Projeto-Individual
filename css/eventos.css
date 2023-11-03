@@ -28,7 +28,7 @@ body{
 
 .logo{
     font-size: 25px;
-    color: aqua;
+    color: red;
     text-decoration: none;
     font-weight: 600;
 }
@@ -44,5 +44,34 @@ body{
 
 .navbar a:hover,
 .navbar a.ativado{
-    color: aqua;
+    color: red;
 }
+
+/* BANNER */
+
+.banner {
+    height: fit-content;
+    padding: 40px 0;
+    color: white;
+    background-image: url("../assets/img/eventos/banner-eventos.jpg");
+    background-size: cover;
+  }
+  
+  .banner .container {
+    height: 400px;
+    font-size: 36px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .banner p {
+    margin-left: 100px;
+    margin-top: 50px;
+    padding: 0;
+    width: 280px;
+    font-size: 36px;
+  }
+  
+  .banner .container span {
+    font-weight: 800;
+  }
