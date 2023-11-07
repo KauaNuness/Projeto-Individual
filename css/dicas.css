@@ -79,7 +79,7 @@ body{
   /* DICAS */
 
 .container-dicas {
-  margin: 40px;
+  margin: 20px;
   background-color: #121212;
   display: flex;
 }
@@ -89,6 +89,8 @@ body{
   height: 170px;
   object-fit: cover;
   border-radius: 25px;
+  margin-top: 50px;
+  margin-bottom: 10px;
 }
 
 .social p {
@@ -96,7 +98,6 @@ body{
 }
 
 .box {
-  margin: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;

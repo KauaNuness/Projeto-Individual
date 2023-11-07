@@ -28,7 +28,7 @@ body{
 
 .logo{
     font-size: 25px;
-    color: aqua;
+    color: purple;
     text-decoration: none;
     font-weight: 600;
 }
@@ -44,7 +44,7 @@ body{
 
 .navbar a:hover,
 .navbar a.ativado{
-    color: aqua;
+    color: purple;
 }*{
     margin: 0;
     padding: 0;
@@ -73,7 +73,7 @@ body{
 
 .logo{
     font-size: 25px;
-    color: aqua;
+    color: purple;
     text-decoration: none;
     font-weight: 600;
 }
@@ -89,7 +89,7 @@ body{
 
 .navbar a:hover,
 .navbar a.ativado{
-    color: aqua;
+    color: purple;
 }
 
 /* LOGIN */
@@ -104,7 +104,7 @@ body{
 
 #login a{
     text-decoration: none;
-    color: aqua;
+    color: purple;
 }
 
 .email input{
@@ -113,7 +113,7 @@ body{
     width: 250px;
     height: 40px;
     padding-left: 15px;
-    background-color: rgb(7, 43, 43);
+    background-color: rgba(66, 0, 66, 0.425);
     color: #b6b6b6;
 }
 
@@ -123,7 +123,7 @@ body{
     width: 250px;
     height: 40px;
     padding-left: 15px;
-    background-color: rgb(7, 43, 43);
+    background-color: rgba(66, 0, 66, 0.425);
     color: #b6b6b6;
     margin-top: 15px;
 }
@@ -135,7 +135,7 @@ body{
     height: 40px;
     border-radius: 20px;
     border: none;
-    background-color: aqua;
+    background-color: purple;
     color: #141414;
 }
 

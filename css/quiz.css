@@ -28,7 +28,7 @@ body{
 
 .logo{
     font-size: 25px;
-    color: aqua;
+    color: yellow;
     text-decoration: none;
     font-weight: 600;
 }
@@ -44,5 +44,48 @@ body{
 
 .navbar a:hover,
 .navbar a.ativado{
-    color: aqua;
+    color: yellow;
 }
+
+/* QUIZ */
+
+#quiz-container {
+    text-align: center;
+    margin: 100px auto;
+    width: 80%;
+  }
+  
+  h1 {
+    color: yellow;
+  }
+  
+  #question-container {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin: 10px 0;
+    cursor: pointer;
+    background-color: blue;
+  }
+  
+  button {
+    background-color: #ededed;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px;
+  }
+  
+  button:hover {
+    background-color: yellow;
+  }
