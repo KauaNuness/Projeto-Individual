@@ -1,0 +1,45 @@
+-- CRIANDO O BANCO DE DADOS
+CREATE DATABASE cosKAU;
+USE cosKAU;
+
+-- CRIANDO AS TABELAS
+CREATE TABLE Usuario(
+idUsuario INT PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(45),
+email VARCHAR(45),
+senha VARCHAR(45)) AUTO_INCREMENT = 100;
+
+CREATE TABLE Cosplan(
+idCosplan INT PRIMARY KEY AUTO_INCREMENT,
+fkUsuario INT,
+nome VARCHAR(45),
+anime VARCHAR(45),
+versao VARCHAR(45),
+CONSTRAINT ForeignKeyUsuarioCosplan FOREIGN KEY (fkUsuario) REFERENCES Usuario(idUsuario)
+);
+
+CREATE TABLE Quiz(
+fkUsuario INT PRIMARY KEY,
+pontuacao INT,
+CONSTRAINT ForeignKeyUsuarioQuiz FOREIGN KEY (fkUsuario) REFERENCES Usuario(idUsuario)
+);
+
+CREATE TABLE Endereco(
+idEndereco INT PRIMARY KEY AUTO_INCREMENT,
+estado VARCHAR(45),
+cidade VARCHAR(45),
+bairro VARCHAR(45),
+rua VARCHAR(45),
+numero INT,
+cep CHAR(9)) AUTO_INCREMENT = 100;
+
+CREATE TABLE Eventos(
+idEventos INT PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(45),
+dtEvento DATETIME,
+valor DECIMAL(3,2),
+fkEndereco INT,
+CONSTRAINT ForeignKeyEnderecoEventos FOREIGN KEY (fkEndereco) REFERENCES Endereco(idEndereco)
+) AUTO_INCREMENT = 50;
+
+-- INSERT

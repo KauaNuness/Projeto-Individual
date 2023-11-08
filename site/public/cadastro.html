@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cosKAU - Login e Cadastro</title>
+    <title>cosKAU - Cadastro</title>
 
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/cadastro.css">
 </head>
 <body>
     <header class="header">
@@ -14,11 +14,9 @@
 
         <nav class="navbar">
             <a href="index.html">Home</a>
-            <a href="eventos.html">Eventos</a>
-            <a href="quiz.html">Quiz</a>
             <a href="dicas.html">Dicas</a>
-            <a href="login.html" class="ativado">Login</a>
-            <a href="cadastro.html">Cadastro</a>
+            <a href="login.html">Login</a>
+            <a href="cadastro.html" class="ativado">Cadastro</a>
         </nav>
 
     </header>
@@ -26,18 +24,26 @@
     <div id="login">
         <div class="caixa">
 
-            <h1>LOGIN</h1>
+            <h1>CADASTRO</h1>
 
             <div class="email">
                 <input type="email" placeholder="E-mail">
+            </div>
+
+            <div class="nome">
+                <input type="text" placeholder="Nome">
             </div>
 
             <div class="senha">
                 <input type="password" placeholder="Senha">
             </div>
 
+            <div class="senha">
+                <input type="password" placeholder="Repetir Senha">
+            </div>
+
             <div class="entrar">
-                <p>Ainda não tem uma conta? <a href="cadastro.html">Crie uma aqui</a></p>
+                <p>Já tem uma conta? <a href="login.html">Entre aqui</a></p>
                 <button onclick="ButtonEntrar()" class="btn">Entrar</button>
             </div>
 
