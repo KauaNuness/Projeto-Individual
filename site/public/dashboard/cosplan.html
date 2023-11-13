@@ -17,15 +17,45 @@
       <li><a href="configuracoes.html">Configurações</a></li>
       <li><a href="cosplan.html">Cosplan</a></li>
       <li><a href="eventos.html">Eventos</a></li>
-      <li><a href="quiz.html">Quiz</a></li>
-      <li><a href="#" class="sair-btn">Sair</a></li>
+      <li><a href="toppersonagens.html">Top Personagens</a></li>
+      <li><a href="../index.html" class="sair-btn">Sair</a></li>
       <!-- Adicione mais itens do menu conforme necessário -->
     </ul>
   </div>
   <div class="content">
+    <div class="banner"></div>
     <!-- Conteúdo página -->
     <h1>Cosplan</h1>
-
+    <section class="section-input">
+      <div class="cosplan-container">
+        <h2>Criar Cosplan</h2>
+  
+        <div class="input-field">
+            <label for="">Nome Personagem:</label>
+            <input type="text" id="input_cosplan_nome" class="cosplan" required>
+        </div>
+  
+        <div class="input-field">
+            <label for="">Franquia:</label>
+            <input type="text" id="input_cosplan_franquia" class="cosplan" required>
+        </div>
+  
+        <div class="input-field">
+            <label for="">Versão:</label>
+            <input type="text" id="input_cosplan_versao" class="cosplan" required>
+        </div>
+  
+        <button id="confirm-button">Criar Cosplan</button>
+  
+        
+      </div>
+  
+      <div class="lista-container">
+        <h2>Lista Cosplan</h2>
+    
+        <button id="delete-button">Deletar Cosplan</button>
+      </div>
+    </section>
   </div>
 </body>
 </html>

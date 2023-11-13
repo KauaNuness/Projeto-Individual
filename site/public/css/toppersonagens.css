@@ -4,15 +4,11 @@
 body {
     margin: 0;
     display: flex;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     font-family: 'Poppins', sans-serif;
-    background-image: url(../assets/img/configuracoes/fundo-configuracoes.jpg);
-    width: 100%;
-    height: 250px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    }
+    background-color: #121212;
+  }
   
   /* MENU */
 
@@ -67,64 +63,27 @@ body {
   .content {
     width: 80%;
     height: 100%;
+    margin-left: 20%;
     display: flex;
     align-items: center;
     flex-direction: column;
   }
 
+  /* BANNER */
+
+.banner {
+  background-image: url(../assets/img/toppersonagens/top\ personagens\ -\ banner.jpg);
+  margin-bottom: 20px;
+  background-size: cover;
+  width: 100%;
+  height: 250px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+  
   /* CONTEUDO */
 
-  .settings-container {
-    background-color: rgb(62, 0, 0);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 300px;
-    text-align: center;
-    margin-left: 50%;
-    margin-top: 10%;
-    border-radius: 25px;
-}
-
-h2 {
-    margin-bottom: 20px;
+  .content h1 {
     color: #ededed;
-}
-
-.input-field {
-    margin-bottom: 15px;
-    text-align: left;
-}
-
-.input-field input {
-  border-radius: 25px;
-  border: none;
-  background-color: rgba(205, 54, 54, 0.745);
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    color: #ededed;
-}
-
-input {
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
-}
-
-button {
-    background-color: red;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 10px;
-    transition: 0.5;
-}
-
-button:hover{
-background-color: rgb(156, 0, 0);
-}
-
+  }
