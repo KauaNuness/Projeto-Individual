@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/eventos.css">
   <title>cosKAU - Eventos</title>
 </head>
+
 <body>
   <div class="sidebar">
     <div class="user-profile">
       <img src="../assets/img/teste1.jpeg" alt="Foto de Perfil">
-      <p>Nome do Usuário</p>
+      <p><span id="b_usuario">usuário</span></p>
     </div>
     <ul class="menu-list">
       <li><a href="dashboard.html">Página Inicial</a></li>
@@ -28,8 +30,54 @@
     <h1>Eventos</h1>
 
     <div id="eventos-container"></div>
-    <script src="../js/eventos.js"></script>
 
   </div>
 </body>
+
 </html>
+<script>
+
+      b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
+  var eventosContainer = document.querySelector("#eventos-container");
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Suponha que você tenha um array de eventos cosplay
+    var eventosCosplay = [
+      {
+        nome: "Up!ABC",
+        localizacao: "Universidade USCS, São Caetano-SP",
+        dia: "18-12-2023 e 19-12-2023",
+        horario: "10:00 as 19:00"
+      },
+      {
+        nome: "Heromix",
+        localizacao: "Esporte Clube Santo André, Santo André-SP",
+        dia: "22-01-2024 e 23-01-2024",
+        horario: "10:00 as 20:00"
+      },
+      {
+        nome: "BGS",
+        localizacao: "Expor Center Norte, São Paulo-SP",
+        dia: "10-10-2024 até 15-10-2024",
+        horario: "12:00 as 21:00"
+      },
+
+      // Adicione mais eventos conforme necessário
+    ];
+
+    // Itera sobre os eventos e cria elementos HTML para exibição
+    eventosCosplay.forEach(function (evento) {
+      var eventoHTML = `
+            <div class="evento">
+                <h2>${evento.nome}</h2>
+                <p>Local: ${evento.localizacao}</p>
+                <p>Data: ${evento.dia}, Horário: ${evento.horario}</p>
+            </div>
+        `;
+
+      eventosContainer.innerHTML += eventoHTML;
+    });
+  });
+
+</script>

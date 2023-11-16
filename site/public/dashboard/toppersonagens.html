@@ -12,7 +12,7 @@
   <div class="sidebar">
     <div class="user-profile">
       <img src="../assets/img/teste1.jpeg" alt="Foto de Perfil">
-      <p>Nome do Usuário</p>
+      <p><span id="b_usuario">usuário</span></p>
     </div>
     <ul class="menu-list">
       <li><a href="dashboard.html">Página Inicial</a></li>
@@ -36,3 +36,6 @@
 </body>
 
 </html>
+<script>
+  b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+</script>

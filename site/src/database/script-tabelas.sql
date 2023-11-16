@@ -3,25 +3,28 @@ CREATE DATABASE cosKAU;
 USE cosKAU;
 
 -- CRIANDO AS TABELAS
+CREATE TABLE PersonagemFav(
+idPersonagem INT PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(45),
+franquia VARCHAR(45)
+);
+
 CREATE TABLE Usuario(
 idUsuario INT PRIMARY KEY AUTO_INCREMENT,
 nome VARCHAR(45),
 email VARCHAR(45),
-senha VARCHAR(45)) AUTO_INCREMENT = 100;
+senha VARCHAR(45),
+fkPersonagemFav INT,
+CONSTRAINT fkPersonagemFav FOREIGN KEY (fkPersonagemFav) REFERENCES PersonagemFav(idPersonagem)
+) AUTO_INCREMENT = 100;
 
 CREATE TABLE Cosplan(
 idCosplan INT PRIMARY KEY AUTO_INCREMENT,
 fkUsuario INT,
 nome VARCHAR(45),
-anime VARCHAR(45),
+franquia VARCHAR(45),
 versao VARCHAR(45),
 CONSTRAINT ForeignKeyUsuarioCosplan FOREIGN KEY (fkUsuario) REFERENCES Usuario(idUsuario)
-);
-
-CREATE TABLE Quiz(
-fkUsuario INT PRIMARY KEY,
-pontuacao INT,
-CONSTRAINT ForeignKeyUsuarioQuiz FOREIGN KEY (fkUsuario) REFERENCES Usuario(idUsuario)
 );
 
 CREATE TABLE Endereco(
@@ -43,3 +46,14 @@ CONSTRAINT ForeignKeyEnderecoEventos FOREIGN KEY (fkEndereco) REFERENCES Enderec
 ) AUTO_INCREMENT = 50;
 
 -- INSERT
+INSERT INTO personagemFav VALUES
+(null, 'Satoru Gojo', 'Jujutsu Kaisen'),
+(null, 'Yuta Okkotsu', 'Jujutsu Kaissen'),
+(null, 'Monkey D.Luffy', 'One Piece'),
+(null, 'Roronoa Zoro', 'One Piece'),
+(null, 'Makima', 'Chainsaw Man'),
+(null, 'Denji', 'Chainsaw Man'),
+(null, 'Jinx', 'League Of Legends'),
+(null, 'Caitlyn', 'League Of Legends'),
+(null, 'Joel Miller', 'The Last Of Us'),
+(null, 'Ellie Williams', 'The Last Of Us');
