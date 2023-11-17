@@ -87,6 +87,6 @@ body {
     color: #ededed;
   }
 
-  span {
+ .content span {
     color: red;
   }

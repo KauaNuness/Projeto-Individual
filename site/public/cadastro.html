@@ -27,35 +27,44 @@
             <h1>CADASTRO</h1>
 
             <div class="email">
-                <input type="email" placeholder="E-mail">
+                <input type="email" placeholder="E-mail" id="input_email">
             </div>
 
             <div class="nome">
-                <input type="text" placeholder="Nome">
+                <input type="text" placeholder="Nome" id="input_nome">
             </div>
 
             <div class="senha">
-                <input type="password" placeholder="Senha">
+                <input type="password" placeholder="Senha" id="input_senha">
             </div>
 
             <div class="senha">
-                <input type="password" placeholder="Repetir Senha">
+                <input type="password" placeholder="Repetir Senha" id="input_repetir_senha">
             </div>
             
             <div class="select">
                 <p>Personagem Favorito</p>
-                <select name="" id="">
-                    
+                <select name="" id="select_personagem">
+                    <option value="1">Satoru Gojo</option>
+                    <option value="2">Yuta Okkotsu</option>
+                    <option value="3">Monkey D.Luffy</option>
+                    <option value="4">Roronoa Zoro</option>
+                    <option value="5">Makima</option>
+                    <option value="6">Denji</option>
+                    <option value="7">Jinx</option>
+                    <option value="8">Caitlyn</option>
+                    <option value="9">Joel Miller</option>
+                    <option value="10">Ellie Williams</option>
                 </select>
             </div>
 
-            <div class="entrar">
+            <div class="cadastrar">
                 <p>Já tem uma conta? <a href="login.html">Entre aqui</a></p>
-                <button onclick="ButtonEntrar()" class="btn">Entrar</button>
+                <button onclick="ButtonCadastrar()" class="btn">Cadastrar</button>
             </div>
 
         </div>
     </div>
-    
+    <script src="./js/cadastro.js"></script>
 </body>
 </html>

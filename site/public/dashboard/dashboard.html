@@ -9,8 +9,8 @@
 <body>
   <div class="sidebar">
     <div class="user-profile">
-      <img src="../assets/img/teste1.jpeg" alt="Foto de Perfil">
-      <p>Nome do Usuário</p>
+      <img src="../assets/img/profile/icons/yuta.jpg" alt="Foto de Perfil">
+      <p>Olá, <span id="b_usuario">usuário</span>!</p>
     </div>
     <ul class="menu-list">
       <li><a href="dashboard.html">Página Inicial</a></li>
@@ -25,7 +25,7 @@
 
   
   <div class="content">
-    <div class="banner"></div>
+    <img class="banner" src="../assets/img/profile/banner/yuta.jpg" alt="">
     <h1>Bem-vindo</h1>
     <h2>Aqui estão algumas recomendações de animes para você assistir e escolher algum personagem para fazer Cosplay</h2>
 
@@ -136,3 +136,6 @@
   </div>
 </body>
 </html>
+<script>
+      b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+</script>
