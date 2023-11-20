@@ -83,12 +83,12 @@ body {
   /* CONTEUDO */
 
   .content h1 {
-    color: #ededed;
+    color: red;
   }
 
   h2 {
     margin-bottom: 20px;
-    color: red;
+    color: #ededed;
     text-align: center;
 }
 
@@ -162,3 +162,6 @@ background-color: rgb(156, 0, 0);
   align-items: center;
 }
 
+.lista-container p{
+  color: white;
+}
