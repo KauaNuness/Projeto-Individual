@@ -83,6 +83,7 @@ body {
 
 }
 
+<<<<<<< HEAD
 /* CONTEUDO */
 
 .content h1 {
@@ -99,3 +100,8 @@ body {
   margin-bottom: 10%;
   margin-left: 10%;
 }
+=======
+  .content h1 {
+    color:red;
+  }
+>>>>>>> 19df5ffa49b430bbe9da3c73b0b4f7f206bdb35d
