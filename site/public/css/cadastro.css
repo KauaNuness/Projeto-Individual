@@ -139,18 +139,27 @@ body{
     margin-top: 15px;
 }
 
-.entrar .btn{
-    margin-top: 10px;
+.cadastrar .btn{
     cursor: pointer;
     width: 120px;
     height: 40px;
     border-radius: 20px;
     border: none;
-    background-color: orangered;
-    color: #141414;
+    background-color: rgb(82, 22, 0);
+    color: #ededed;
 }
 
-.entrar p{
+.cadastrar .btn:hover{
+    background-color: orangered;
+    color: #ededed;
+    transition: 0.5s;
+}
+
+.select{
+    margin-top: 10px;
+}
+
+.cadastrar p{
     margin-top: 10px;
     color: #FAFAFA;
 }
@@ -169,4 +178,20 @@ p{
 
 .caixa{
     margin-top: 200px;
+}
+
+#select_personagem{
+    cursor: pointer;
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(82, 22, 0);
+    color: #ededed;
+}
+
+#select_personagem:hover{
+    background-color: orangered;
+    color: #ededed;
+    transition: 0.5s;
 }

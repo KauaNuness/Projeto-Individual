@@ -83,12 +83,12 @@ body {
   /* CONTEUDO */
 
   .content h1 {
-    color: #ededed;
+    color: red;
   }
 
   h2 {
     margin-bottom: 20px;
-    color: red;
+    color: #ededed;
     text-align: center;
 }
 

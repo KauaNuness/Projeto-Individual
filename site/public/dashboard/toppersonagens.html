@@ -11,8 +11,8 @@
 <body>
   <div class="sidebar">
     <div class="user-profile">
-      <img src="../assets/img/teste1.jpeg" alt="Foto de Perfil">
-      <p>Nome do Usuário</p>
+      <img id="b_icone" src="../assets/img/profile/icons/ellie.jpg" alt="Foto de Perfil">
+      <p><span id="b_usuario">usuário</span></p>
     </div>
     <ul class="menu-list">
       <li><a href="dashboard.html">Página Inicial</a></li>
@@ -29,10 +29,38 @@
     <!-- Conteúdo página -->
     <h1>Top Personagens</h1>
     
-  </div>
-  <script src="../js/quiz.js"></script>
+    <div>
+      <canvas id="myChart"></canvas>
+    </div>
 
-  </div>
+
+  <script src="../js/profileUser.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 
 </html>
+
+<script>
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      datasets: [{
+        label: '# of Votes',
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+
+  
+</script>

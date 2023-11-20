@@ -67,7 +67,7 @@ body {
   width: 80%;
   height: 100%;
   display: flex;
-  align-items: center;
+  align-items: self-start;
   flex-direction: column;
   margin-left: 20%;
   padding: 16px;
@@ -75,6 +75,11 @@ body {
 }
 
 /* TRAILER */
+
+.content a{
+  text-decoration: none;
+  color: red;
+}
   
   h1 {
     font-size: 2em;
@@ -87,6 +92,6 @@ body {
     color: #ededed;
   }
 
-  span {
+ .content span {
     color: red;
   }
