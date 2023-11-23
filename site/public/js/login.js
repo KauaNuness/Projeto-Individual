@@ -34,7 +34,10 @@ function buttonEntrar() {
                 console.log(JSON.stringify(json));
                 sessionStorage.EMAIL_USUARIO = json.email;
                 sessionStorage.NOME_USUARIO = json.nome;
+<<<<<<< HEAD
                 sessionStorage.ICONE_USUARIO = json.icone;
+=======
+>>>>>>> 9a34439ac06fb3d0874e877220b3b6f745c364fd
                 
 
                 setTimeout(function () {
