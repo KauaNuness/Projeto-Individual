@@ -83,18 +83,10 @@ body {
 
 }
 
-<<<<<<< HEAD
 /* CONTEUDO */
 
 .content h1 {
   color: gray;
-=======
-<<<<<<< HEAD
-/* CONTEUDO */
-
-.content h1 {
-  color: red;
->>>>>>> 9a34439ac06fb3d0874e877220b3b6f745c364fd
   margin-left: 35%;
   margin-right: 35%;
 }
@@ -106,13 +98,4 @@ body {
 .grafico #myChart {
   margin-bottom: 10%;
   margin-left: 10%;
-<<<<<<< HEAD
 }
-=======
-}
-=======
-  .content h1 {
-    color:red;
-  }
->>>>>>> 19df5ffa49b430bbe9da3c73b0b4f7f206bdb35d
->>>>>>> 9a34439ac06fb3d0874e877220b3b6f745c364fd
