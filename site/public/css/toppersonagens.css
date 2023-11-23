@@ -2,88 +2,100 @@
 
 
 body {
-    margin: 0;
-    display: flex;
-    height: 100%;
-    width: 100%;
-    font-family: 'Poppins', sans-serif;
-    background-color: #121212;
-  }
-  
-  /* MENU */
+  margin: 0;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: #121212;
+}
 
-  .sidebar {
-    height: 100vh;
-    width: 20%;
-    background-color: black;
-    padding-top: 20px;
-    color: #ededed;
-    position: fixed;
-  }
-  
-  .user-profile {
-    text-align: center;
-  }
-  
-  .user-profile img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-  }
+/* MENU */
 
-  .user-profile p {
-    margin-bottom: 50px;
-  }
-  
-  .menu-list {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .menu-list li {
-    padding: 10px;
-  }
+.sidebar {
+  height: 100vh;
+  width: 20%;
+  background-color: black;
+  padding-top: 20px;
+  color: #ededed;
+  position: fixed;
+}
 
-  .menu-list li .sair-btn{
-    padding: 10px;
-    margin-top: 180px;
-  }
-  
-  .menu-list a {
-    text-decoration: none;
-    color: #ededed;
-    display: block;
-  }
-  
-  .menu-list a:hover {
-    background-color: #555;
-  }
-  
-  .content {
-    width: 80%;
-    height: 100%;
-    margin-left: 20%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
+.user-profile {
+  text-align: center;
+}
 
-  /* BANNER */
+.user-profile img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.user-profile p {
+  margin-bottom: 50px;
+}
+
+.menu-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu-list li {
+  padding: 10px;
+}
+
+.menu-list li .sair-btn {
+  padding: 10px;
+  margin-top: 180px;
+}
+
+.menu-list a {
+  text-decoration: none;
+  color: #ededed;
+  display: block;
+}
+
+.menu-list a:hover {
+  background-color: #555;
+}
+
+.content {
+  width: 80%;
+  height: 100%;
+  margin-left: 20%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+/* BANNER */
 
 .banner {
   background-image: url(../assets/img/toppersonagens/top\ personagens\ -\ banner.jpg);
   margin-bottom: 20px;
   background-size: cover;
   width: 100%;
-  height: 250px;
+  height: 300px;
   background-repeat: no-repeat;
   background-position: center;
+  background-position-y: -70px;
 
 }
-  
-  /* CONTEUDO */
 
-  .content h1 {
-    color: #ededed;
-  }
+/* CONTEUDO */
+
+.content h1 {
+  color: gray;
+  margin-left: 35%;
+  margin-right: 35%;
+}
+
+.grafico {
+  margin-left: 10%;
+}
+
+.grafico #myChart {
+  margin-bottom: 10%;
+  margin-left: 10%;
+}

@@ -85,7 +85,7 @@ body {
 /* CONTEUDO */
 
 .content h1 {
-  color: #ededed;
+  color: red;
 }
 
 .evento {
@@ -96,7 +96,7 @@ body {
 }
 
 h2 {
-  color: red;
+  color: #ededed;
 }
 
 p {

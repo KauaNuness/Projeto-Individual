@@ -161,6 +161,8 @@ body {
 
 .container-footer{
   background-color: black;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer-container{
@@ -222,4 +224,29 @@ body {
 
 .footerBottom{
   color: #ededed;
+}
+
+.container-eu {
+  text-align: center;
+  width: 40%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.container-eu p{
+  color: #ededed;
+  margin-left: 20px;
+}
+
+.footer-logo {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.container-eu img{
+ border-radius: 25%; 
 }

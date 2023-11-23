@@ -72,24 +72,24 @@ body {
 
 }
 
-/* BANNER */
+/* BANNER 
 
 .banner {
-  background-image: url(../assets/img/dashboard/banner.png);
   margin-bottom: 20px;
   background-size: cover;
   width: 100%;
   height: 250px;
   background-repeat: no-repeat;
   background-position: center;
+  background-image: url(../assets/img/dashboard/banner.png);
 
-}
+} */
 
 
 /* CONTEUDO */
 
 .content h1{
-  color: #ededed;
+  color: red;
 }
 
 .content h2{

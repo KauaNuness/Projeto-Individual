@@ -70,25 +70,26 @@ body {
   }
 
   .banner {
-    background-image: url(../assets/img/cosplan/cosplan-banner.jpeg);
+    background-image: url(../assets/img/cosplan/banner-cosplan.jpg);
     margin-bottom: 20px;
     background-size: cover;
     width: 100%;
-    height: 250px;
+    height: 300px;
     background-repeat: no-repeat;
     background-position: center;
+    background-position-y: -70px;
   
   }
 
   /* CONTEUDO */
 
   .content h1 {
-    color: #ededed;
+    color: blue;
   }
 
   h2 {
     margin-bottom: 20px;
-    color: red;
+    color: #ededed;
     text-align: center;
 }
 
@@ -100,7 +101,7 @@ body {
 .input-field input {
   border-radius: 25px;
   border: none;
-  background-color: rgba(205, 54, 54, 0.745);
+  background-color: rgb(88, 88, 206);
 }
 
 label {
@@ -116,7 +117,7 @@ input {
 }
 
 button {
-  background-color: red;
+  background-color: blue;
   color: #fff;
   padding: 10px;
   border: none;
@@ -130,7 +131,7 @@ button {
 
 
 button:hover{
-background-color: rgb(156, 0, 0);
+background-color: rgb(88, 88, 206);
 }
 .section-input{
   width: 90%;
@@ -146,8 +147,9 @@ background-color: rgb(156, 0, 0);
   width: 45%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  height: 388px;
 }
 
 /* */
@@ -158,7 +160,12 @@ background-color: rgb(156, 0, 0);
   width: 45%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  height: 388px;
+  overflow: auto;
+  max-height: 388px;
 }
 
+.lista-container p{
+  color: white;
+}

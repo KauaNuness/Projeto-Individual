@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cosKAU - Calculadora de Orçamento</title>
+
+  <link rel="stylesheet" href="../css/calculadora.css">
+</head>
+
+<body>
+
+  <div class="sidebar">
+    <div class="user-profile">
+      <img id="b_icone" src="../assets/img/profile/icons/ellie.jpg" alt="Foto de Perfil">
+      <p>Olá, <span id="b_usuario">usuário</span>!</p>
+    </div>
+    <ul class="menu-list">
+      <li><a href="dashboard.html">Página Inicial</a></li>
+      <li><a href="toppersonagens.html">Top Personagens</a></li>
+      <li><a href="calculadora.html">Calculadora</a></li>
+      <li><a href="cosplan.html">Cosplan</a></li>
+      <li><a href="eventos.html">Eventos</a></li>
+      <li><a href="../index.html" class="sair-btn">Sair</a></li>
+      <!-- Adicione mais itens do menu conforme necessário -->
+    </ul>
+  </div>
+
+  
+  <div class="content">
+    <div class="banner"></div>
+    <h1>Calculadora de Orçamento</h1>
+
+    <label for="nome">Nome do Acessório:</label>
+    <input type="text" id="nome" placeholder="Nome do Acessório">
+
+    <label for="quantidade">Quantidade:</label>
+    <input type="number" id="quantidade" placeholder="Quantidade">
+
+    <label for="preco">Preço unitário (R$):</label>
+    <input type="number" id="preco" placeholder="Preço unitário em Reais">
+
+    <button onclick="calcularOrcamento()">Adicionar Item</button>
+
+    <h2>Itens Adicionados:</h2>
+    <ul id="listaItens"></ul>
+
+    <h2>Total do Orçamento:</h2>
+    <p id="totalOrcamento">R$ 0,00</p>
+  </div>
+
+  <script src="../js/calculadora.js"></script>
+</body>
+
+</html>
+<script>
+  b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+</script>
