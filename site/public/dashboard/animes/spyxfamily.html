@@ -2,19 +2,26 @@
 <html lang="en">
 
 <head>
+    <!-- Definição do conjunto de caracteres e configuração de viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cosKAU</title>
+    <link rel="shortcut icon" href="../../assets/favicon.png" type="image/x-icon">
 
+    <!-- Inclusão do arquivo de estilo CSS -->
     <link rel="stylesheet" href="css/trailers.css">
 </head>
 
 <body>
+    <!-- Barra lateral (sidebar) -->
     <div class="sidebar">
+        <!-- Perfil do usuário -->
         <div class="user-profile">
             <img id="b_icone" src="../" alt="Foto de Perfil">
             <p><span id="b_usuario">usuário</span></p>
         </div>
+        
+        <!-- Menu de navegação -->
         <ul class="menu-list">
             <li><a href="../dashboard.html">Página Inicial</a></li>
             <li><a href="../toppersonagens.html">Top Personagens</a></li>
@@ -26,13 +33,17 @@
         </ul>
     </div>
 
+    <!-- Conteúdo principal -->
     <div class="content">
 
+        <!-- Título do Trailer -->
         <h1>Spy X Family Trailer</h1>
 
+        <!-- Vídeo incorporado do YouTube -->
         <iframe width="560" height="315" src="https://www.youtube.com/embed/0CJr6AfE2rY" frameborder="0"
             allowfullscreen></iframe>
 
+        <!-- Sinopse do vídeo -->
         <p><span>Sinopse:</span> Há décadas, as nações de Ostania e Westalis promovem uma guerra fria sem fim. Para
             investigar os movimentos do presidente de um importante partido político, Westalis mobiliza Twilight, seu
             melhor agente, a montar uma família falsa e se infiltrar nos eventos sociais promovidos pela escola do filho
@@ -41,15 +52,19 @@
             incomum vai embarcar em aventuras cheias de surpresas para garantir a paz mundial.
         </p>
 
+        <!-- Onde assistir e link para Crunchyroll -->
         <p><span>Onde assistir:</span> Assista à Temporada Final Agora na <a
                 href="https://www.crunchyroll.com/pt-br/series/G4PH0WXVJ/spy-x-family">Crunchyroll</a>.</p>
     </div>
 
-    
 </body>
 
 </html>
+
+<!-- Script para preencher o nome do usuário e a foto do perfil -->
 <script>
+    // Atribuição do nome do usuário à barra lateral
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    // Atribuição do caminho da foto do perfil à barra lateral
     b_icone.src += sessionStorage.ICONE_USUARIO;
 </script>

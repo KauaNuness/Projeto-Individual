@@ -2,19 +2,26 @@
 <html lang="en">
 
 <head>
+    <!-- Configuração da página -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cosKAU</title>
+    <link rel="shortcut icon" href="../../assets/favicon.png" type="image/x-icon">
 
+    <!-- Importação do arquivo CSS -->
     <link rel="stylesheet" href="css/trailers.css">
 </head>
 
 <body>
+    <!-- Barra lateral (sidebar) -->
     <div class="sidebar">
+        <!-- Perfil do usuário -->
         <div class="user-profile">
             <img id="b_icone" src="../" alt="Foto de Perfil">
             <p><span id="b_usuario">usuário</span></p>
         </div>
+        
+        <!-- Menu de navegação -->
         <ul class="menu-list">
             <li><a href="../dashboard.html">Página Inicial</a></li>
             <li><a href="../toppersonagens.html">Top Personagens</a></li>
@@ -26,28 +33,35 @@
         </ul>
     </div>
 
+    <!-- Conteúdo principal -->
     <div class="content">
 
+        <!-- Título do Trailer -->
         <h1>Blue Lock Trailer</h1>
 
+        <!-- Vídeo incorporado do YouTube -->
         <iframe width="560" height="315" src="https://www.youtube.com/embed/RezlceK7wiM" frameborder="0"
             allowfullscreen></iframe>
 
-        <p><span>Sinopse:</span>Após sofrer um vexame na Copa do Mundo de 2018, a seleção japonesa sofre para se
+        <!-- Sinopse do vídeo -->
+        <p><span>Sinopse:</span> Após sofrer um vexame na Copa do Mundo de 2018, a seleção japonesa sofre para se
             recompor. Falta ao time um artilheiro, uma estrela capaz de guiá-los à vitória. Com o intuito de criar um
             atacante com fome de bola e sede de vitória, capaz de virar jogos tidos como impossíveis, a Confederação
-            Japonesa de Futebol reune 300 dos melhores jogadores de base do país em um só lugar. Centenas de jovens vão
-            se enfrentar numa batalha de músculos e de egos para provar que são os melhores.
+            Japonesa de Futebol reúne 300 dos melhores jogadores de base do país em um só lugar. Centenas de jovens vão
+            se enfrentar numa batalha de músculos e de egos para provar que são os melhores.</p>
+
+        <!-- Onde assistir e link para Crunchyroll -->
         <p><span>Onde assistir:</span> Assista à Temporada agora na <a
                 href="https://www.crunchyroll.com/pt-br/series/G4PH0WEKE/bluelock">Crunchyroll</a>.</p>
-        </p>
     </div>
 
+    <!-- Script para preencher o nome do usuário e a foto do perfil -->
+    <script>
+        // Atribuição do nome do usuário à barra lateral
+        b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+        // Atribuição do caminho da foto do perfil à barra lateral
+        b_icone.src += sessionStorage.ICONE_USUARIO;
+    </script>
 </body>
 
 </html>
-
-<script>
-    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
-    b_icone.src += sessionStorage.ICONE_USUARIO;
-</script>

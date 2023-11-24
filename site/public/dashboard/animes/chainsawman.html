@@ -2,19 +2,26 @@
 <html lang="en">
 
 <head>
+    <!-- Definição do conjunto de caracteres e configuração de viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cosKAU</title>
+    <link rel="shortcut icon" href="../../assets/favicon.png" type="image/x-icon">
 
+    <!-- Inclusão do arquivo de estilo CSS -->
     <link rel="stylesheet" href="css/trailers.css">
 </head>
 
 <body>
+    <!-- Barra lateral (sidebar) -->
     <div class="sidebar">
+        <!-- Perfil do usuário -->
         <div class="user-profile">
             <img id="b_icone" src="../" alt="Foto de Perfil">
             <p><span id="b_usuario">usuário</span></p>
         </div>
+        
+        <!-- Menu de navegação -->
         <ul class="menu-list">
             <li><a href="../dashboard.html">Página Inicial</a></li>
             <li><a href="../toppersonagens.html">Top Personagens</a></li>
@@ -26,26 +33,36 @@
         </ul>
     </div>
 
+    <!-- Conteúdo principal -->
     <div class="content">
 
+        <!-- Título do Trailer -->
         <h1>Chainsaw Man Trailer</h1>
 
+        <!-- Vídeo incorporado do YouTube -->
         <iframe width="560" height="315" src="https://www.youtube.com/embed/Cb9F59uvA_0" frameborder="0"
             allowfullscreen></iframe>
 
+        <!-- Sinopse do vídeo -->
         <p><span>Sinopse:</span> Denji é um adolescente que mora com Pochita, o Demônio da Motosserra. Por conta das
             dívidas que herdou de seu pai, ele vive na miséria, exterminando outros demônios com Pochita para pagar as
             contas. Até que, um dia, Denji é traído e morre. Em seus últimos momentos de consciência, ele firma um
             contrato com Pochita e renasce como o Homem-Motosserra - um humano com coração de demônio.
         </p>
 
+        <!-- Onde assistir e link para Crunchyroll -->
         <p><span>Onde assistir:</span> Assista à Temporada agora na <a
                 href="https://www.crunchyroll.com/pt-br/series/GVDHX8QNW/chainsaw-man">Crunchyroll</a>.</p>
     </div>
 
-
 </body>
 
 </html>
-<script>b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
-    b_icone.src += sessionStorage.ICONE_USUARIO;</script>
+
+<!-- Script para preencher o nome do usuário e a foto do perfil -->
+<script>
+    // Atribuição do nome do usuário à barra lateral
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    // Atribuição do caminho da foto do perfil à barra lateral
+    b_icone.src += sessionStorage.ICONE_USUARIO;
+</script>

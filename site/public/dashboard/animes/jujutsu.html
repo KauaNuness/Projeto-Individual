@@ -2,19 +2,26 @@
 <html lang="en">
 
 <head>
+    <!-- Definição do conjunto de caracteres e configuração de viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cosKAU</title>
+    <link rel="shortcut icon" href="../../assets/favicon.png" type="image/x-icon">
 
+    <!-- Inclusão do arquivo de estilo CSS -->
     <link rel="stylesheet" href="css/trailers.css">
 </head>
 
 <body>
+    <!-- Barra lateral (sidebar) -->
     <div class="sidebar">
+        <!-- Perfil do usuário -->
         <div class="user-profile">
             <img id="b_icone" src="../" alt="Foto de Perfil">
             <p><span id="b_usuario">usuário</span></p>
         </div>
+        
+        <!-- Menu de navegação -->
         <ul class="menu-list">
             <li><a href="../dashboard.html">Página Inicial</a></li>
             <li><a href="../toppersonagens.html">Top Personagens</a></li>
@@ -26,27 +33,37 @@
         </ul>
     </div>
 
+    <!-- Conteúdo principal -->
     <div class="content">
 
+        <!-- Título do Trailer -->
         <h1>Jujutsu Kaisen Trailer</h1>
 
+        <!-- Vídeo incorporado do YouTube -->
         <iframe width="560" height="315" src="https://www.youtube.com/embed/ynr6gnyu9NE" frameborder="0"
             allowfullscreen></iframe>
 
-        <p><span>Sinopse:</span>Sofrimento, arrependimento, vergonha: os sentimentos negativos dos humanos tornam-se
+        <!-- Sinopse do vídeo -->
+        <p><span>Sinopse:</span> Sofrimento, arrependimento, vergonha: os sentimentos negativos dos humanos tornam-se
             Maldições, causando terríveis acidentes que podem levar até mesmo à morte. E pra piorar, Maldições só podem
             ser exorcizadas por outras Maldições. Certo dia, para salvar amigos que estavam sendo atacados por
             Maldições, Yuji Itadori engole o dedo do Ryomen-Sukuna, absorvendo sua Maldição. Ele então decide se
             matricular no Colégio Técnico de Feitiçaria de Tóquio, uma organização que combate as Maldições... e assim
             começa a heróica lenda do garoto que tornou-se uma Maldição para exorcizar uma Maldição.</p>
 
+        <!-- Onde assistir e link para Crunchyroll -->
         <p><span>Onde assistir:</span> Assista à Temporada agora na <a
                 href="https://www.crunchyroll.com/pt-br/series/GRDV0019R/jujutsu-kaisen">Crunchyroll</a>.</p>
     </div>
 
-    
 </body>
 
 </html>
-<script>b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
-    b_icone.src += sessionStorage.ICONE_USUARIO;</script>
+
+<!-- Script para preencher o nome do usuário e a foto do perfil -->
+<script>
+    // Atribuição do nome do usuário à barra lateral
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    // Atribuição do caminho da foto do perfil à barra lateral
+    b_icone.src += sessionStorage.ICONE_USUARIO;
+</script>
