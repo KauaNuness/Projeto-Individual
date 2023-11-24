@@ -12,7 +12,7 @@
 <body>
     <div class="sidebar">
         <div class="user-profile">
-            <img src="../../assets/img/teste1.jpeg" alt="Foto de Perfil">
+            <img src="../" alt="Foto de Perfil">
             <p><span id="b_usuario">usuário</span></p>
         </div>
         <ul class="menu-list">
@@ -40,7 +40,11 @@
         <p><span>Onde assistir:</span> Assista agora na <a href="https://www.netflix.com/title/80217863">Netflix</a>.</p>
     </div>
 
-    <script src="../../js/profileUser.js"></script>
+
 </body>
 
 </html>
+<script>
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    b_icone.src += sessionStorage.ICONE_USUARIO;
+</script>

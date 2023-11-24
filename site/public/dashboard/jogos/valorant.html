@@ -12,7 +12,7 @@
 <body>
     <div class="sidebar">
         <div class="user-profile">
-            <img id="b_icone" src="../../assets/img/profile/icons/ellie.jpg" alt="Foto de Perfil">
+            <img id="b_icone" src="../" alt="Foto de Perfil">
             <p><span id="b_usuario">usuário</span></p>
         </div>
         <ul class="menu-list">
@@ -37,10 +37,14 @@
             táticas. Com apenas uma vida por rodada, você deve pensar mais rápido que o oponente se quiser sobreviver.
             Encare inimigos nos modos Competitivo e Sem Ranque, além da Disputa da Spike e do Mata-Mata! </p>
 
-        <p><span>Onde jogar:</span> Jogue agora gratuitammente pela <a href="https://playvalorant.com/pt-br/?gad_source=1&gclid=CjwKCAiAgeeqBhBAEiwAoDDhn_2phONy6e89OWVVhjgs7y4tZPYysEMGdS8Q5iyJGFIWTM15O3DzLRoCx1gQAvD_BwE&gclsrc=aw.ds">Riot Games</a>.</p>
+        <p><span>Onde jogar:</span> Jogue agora gratuitamente pela <a href="https://playvalorant.com/pt-br/?gad_source=1&gclid=CjwKCAiAgeeqBhBAEiwAoDDhn_2phONy6e89OWVVhjgs7y4tZPYysEMGdS8Q5iyJGFIWTM15O3DzLRoCx1gQAvD_BwE&gclsrc=aw.ds">Riot Games</a>.</p>
     </div>
 
-    <script src="../../js/profileUser.js"></script>
+
 </body>
 
 </html>
+<script>
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    b_icone.src += sessionStorage.ICONE_USUARIO;
+</script>

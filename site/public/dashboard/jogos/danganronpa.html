@@ -12,7 +12,7 @@
 <body>
     <div class="sidebar">
         <div class="user-profile">
-            <img id="b_icone" src="../../assets/img/profile/icons/ellie.jpg" alt="Foto de Perfil">
+            <img id="b_icone" src="../" alt="Foto de Perfil">
             <p><span id="b_usuario">usuário</span></p>
         </div>
         <ul class="menu-list">
@@ -42,7 +42,10 @@
         </p>
     </div>
 
-    <script src="../../js/profileUser.js"></script>
 </body>
 
 </html>
+<script>
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    b_icone.src += sessionStorage.ICONE_USUARIO;
+</script>

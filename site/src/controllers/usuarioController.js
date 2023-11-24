@@ -1,6 +1,25 @@
 var usuarioModel = require("../models/usuarioModel");
 var aquarioModel = require("../models/aquarioModel");
 
+function grafico(req, res){
+
+    usuarioModel.grafico()
+        .then(
+            function (resultadoGrafico){
+                console.log(`Resultados: ${JSON.stringify(resultadoGrafico)}`); // transforma JSON em String
+
+                if (resultadoGrafico.length > 0) {
+                    console.log(resultadoGrafico);
+                    res.status(200).json(resultadoGrafico);
+                    
+                } else {
+                    res.status(404).send("A lista está vazia");
+                }
+
+            }
+        )
+}
+
 function autenticar(req, res) {
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
@@ -26,7 +45,7 @@ function autenticar(req, res) {
                                         nome: resultadoAutenticar[0].nome,
                                         email: resultadoAutenticar[0].email,
                                         senha: resultadoAutenticar[0].senha,
-                                        // personagemFav: resultadoAutenticar[0].idPersonagem
+                                        icone: resultadoAutenticar[0].icone
                                     });
                                 } else {
                                     res.status(204).json({ aquarios: [] });
@@ -92,5 +111,6 @@ function cadastrar(req, res) {
 
 module.exports = {
     autenticar,
-    cadastrar
+    cadastrar,
+    grafico
 }

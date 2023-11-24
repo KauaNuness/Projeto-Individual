@@ -28,15 +28,14 @@
     <div class="banner"></div>
     <!-- Conteúdo página -->
     <h1>Top Personagens</h1>
-    
 
     <div class="grafico">
 
-      <div>
+      <div class="myChart">
         <canvas id="myChart"></canvas>
       </div>
   
-      <div>
+      <div class="myChart2">
         <canvas id="myChart2"></canvas>
       </div>
 
@@ -45,65 +44,8 @@
 
   <script src="../js/profileUser.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../js/toppersonagens.js"></script>
 </body>
 
 </html>
 
-<script>
-  const ctx = document.getElementById('myChart');
-
-  new Chart(ctx, {
-    type: 'doughnut',
-    data: {
-      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-      datasets: [{
-        label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3],
-        borderWidth: 1
-      }]
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true
-        }
-      }
-    }
-  });
-
-  const ctx2 = document.getElementById('myChart2');
-    new Chart(ctx2, {
-        type: 'bar',
-        data: {
-            labels: ['Janeiro', 'Feveiro', 'Março', 'Abril', 'Maio', 'Junho'],
-            datasets: [{
-                label: 'Umidade Média',
-                data: [90, 89, 93, 87, 88, 82],
-                borderWidth: 1
-
-            },
-            {
-                label: 'Temperatura Média',
-                data: [22, 24, 27, 23, 20, 18],
-                borderWidth: 1
-                
-            }]
-
-
-
-
-        },
-
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
-
-    
-
-  
-</script>

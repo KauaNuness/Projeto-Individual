@@ -12,7 +12,7 @@
 <body>
     <div class="sidebar">
         <div class="user-profile">
-            <img id="b_icone" src="../../assets/img/profile/icons/ellie.jpg" alt="Foto de Perfil">
+            <img id="b_icone" src="../" alt="Foto de Perfil">
             <p><span id="b_usuario">usuário</span></p>
         </div>
         <ul class="menu-list">
@@ -38,11 +38,16 @@
             atacante com fome de bola e sede de vitória, capaz de virar jogos tidos como impossíveis, a Confederação
             Japonesa de Futebol reune 300 dos melhores jogadores de base do país em um só lugar. Centenas de jovens vão
             se enfrentar numa batalha de músculos e de egos para provar que são os melhores.
-        <p><span>Onde assistir:</span> Assista à Temporada agora na <a href="https://www.crunchyroll.com/pt-br/series/G4PH0WEKE/bluelock">Crunchyroll</a>.</p>
+        <p><span>Onde assistir:</span> Assista à Temporada agora na <a
+                href="https://www.crunchyroll.com/pt-br/series/G4PH0WEKE/bluelock">Crunchyroll</a>.</p>
         </p>
     </div>
 
-    <script src="../../js/profileUser.js"></script>
 </body>
 
 </html>
+
+<script>
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    b_icone.src += sessionStorage.ICONE_USUARIO;
+</script>

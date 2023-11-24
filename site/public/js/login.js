@@ -35,7 +35,6 @@ function buttonEntrar() {
                 sessionStorage.EMAIL_USUARIO = json.email;
                 sessionStorage.NOME_USUARIO = json.nome;
                 sessionStorage.ICONE_USUARIO = json.icone;
-                
 
                 setTimeout(function () {
                     window.location.href = "./dashboard/dashboard.html";

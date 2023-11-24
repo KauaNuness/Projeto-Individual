@@ -23,7 +23,17 @@ function cadastrar(nome, email, senha, personagem) {
     return database.executar(instrucao);
 }
 
+function grafico(){
+    var instrucao = `
+    SELECT COUNT(u.fkPersonagemFav) AS count, p.nome FROM Usuario AS u JOIN personagemFav AS p ON u.fkPersonagemFav = p.idPersonagem GROUP BY p.nome;
+    `;
+
+    return database.executar(instrucao);
+
+}
+
 module.exports = {
     autenticar,
-    cadastrar
+    cadastrar,
+    grafico
 };

@@ -12,7 +12,7 @@
 <body>
     <div class="sidebar">
         <div class="user-profile">
-            <img id="b_icone" src="../../assets/img/profile/icons/ellie.jpg" alt="Foto de Perfil">
+            <img id="b_icone" src="../" alt="Foto de Perfil">
             <p><span id="b_usuario">usuário</span></p>
         </div>
         <ul class="menu-list">
@@ -38,7 +38,7 @@
             de cinco poderosos Campeões se enfrentam para destruir a base uma da outra. Escolha entre mais de 140
             Campeões para realizar jogadas épicas, assegurar abates e destruir torres conforme você luta até a vitória.
 
-        <p><span>Onde jogar:</span> Jogue agora gratuitammente pela <a
+        <p><span>Onde jogar:</span> Jogue agora gratuitamente pela <a
                 href="https://signup.leagueoflegends.com/pt-br/signup/index#/">Riot Games</a>.</p>
     </div>
 
@@ -46,3 +46,5 @@
 </body>
 
 </html>
+<script>b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    b_icone.src += sessionStorage.ICONE_USUARIO;</script>

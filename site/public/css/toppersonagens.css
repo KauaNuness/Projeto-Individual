@@ -93,9 +93,13 @@ body {
 
 .grafico {
   margin-left: 10%;
+  flex-direction: row;
+ display: flex; 
+ width: 80%;
+ justify-content: center;
 }
 
-.grafico #myChart {
-  margin-bottom: 10%;
-  margin-left: 10%;
+.myChart2{
+  width: 400px;
+  margin-left: 10%
 }

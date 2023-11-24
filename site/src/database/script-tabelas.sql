@@ -62,3 +62,9 @@ INSERT INTO personagemFav VALUES
 
 -- SELECT
 SELECT * FROM usuario JOIN personagemFav ON fkPersonagemFav = idPersonagem;
+use coskau;
+SELECT * from personagemfav;
+select * from usuario;
+SELECT count COUNT(u.fkPersonagemFav), p.nome FROM Usuario AS u JOIN personagemFav AS p ON u.fkPersonagemFav = p.idPersonagem GROUP BY p.nome;
+
+
