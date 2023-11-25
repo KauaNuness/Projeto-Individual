@@ -1,142 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/dashboard.css">
-  <title>cosKAU - Dashboard</title>
-</head>
-<body>
-  <div class="sidebar">
-    <div class="user-profile">
-      <img id="b_icone" src="../assets/img/profile/icons/ellie.jpg" alt="Foto de Perfil">
-      <p>Olá, <span id="b_usuario">usuário</span>!</p>
-    </div>
-    <ul class="menu-list">
-      <li><a href="dashboard.html">Página Inicial</a></li>
-      <li><a href="toppersonagens.html">Top Personagens</a></li>
-      <li><a href="calculadora.html">Calculadora</a></li>
-      <li><a href="cosplan.html">Cosplan</a></li>
-      <li><a href="eventos.html">Eventos</a></li>
-      <li><a href="../index.html" class="sair-btn">Sair</a></li>
-      <!-- Adicione mais itens do menu conforme necessário -->
-    </ul>
-  </div>
-
-  
-  <div class="content">
+    <!-- Configuração da codificação e configuração de exibição para dispositivos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <h1>Bem-vindo!</h1>
-    <h2>Aqui estão algumas recomendações de animes para você assistir e escolher algum personagem para fazer Cosplay</h2>
+    <!-- Link para a folha de estilos do dashboard -->
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon">
 
-    <header class="header-recomendacao">
+    <!-- Título da página -->
+    <title>cosKAU - Dashboard</title>
+</head>
 
-      <div class="recomendacao-container">
-
-          <a href="animes/jujutsu.html" class="recomendacao-itens">
-              <img src="../assets/img/dashboard/Recomendação/anime/Jujutsu.webp" alt="">
-              <p>Jujutsu Kaisen</p>
-          </a>
-
-          <a href="animes/bluelock.html" class="recomendacao-itens">
-              <img src="../assets/img/dashboard/Recomendação/anime/Bluelock.webp" alt="">
-              <p>Blue Lock</p>
-          </a>
-
-          <a href="animes/yourname.html" class="recomendacao-itens">
-              <img src="../assets/img/dashboard/Recomendação/anime/YourName.webp" alt="">
-              <p>Your Name</p>
-          </a>
-          
-          <a href="animes/chainsawman.html" class="recomendacao-itens">
-              <img src="../assets/img/dashboard/Recomendação/anime/ChainsawMan.jpg" alt="">
-              <p>Chainsaw Man</p>
-          </a>
-
-          <a href="animes/spyxfamily.html" class="recomendacao-itens">
-              <img src="../assets/img/dashboard/Recomendação/anime/SpyXFamily.png" alt="">
-              <p>Spy X Family</p>
-          </a>
-
-      </div>
-
-    </header>
-
-      <h2>Aqui estão algumas recomendações de jogos para você jogar e escolher algum personagem para fazer Cosplay</h2>
-
-      <header class="header-recomendacao">
-
-      <div class="recomendacao-container">
-
-          <a href="jogos/danganronpa.html" class="recomendacao-itens">
-              <img src="../assets/img/dashboard/Recomendação/jogo/Danganronpa.jpg" alt="">
-              <p>Danganronpa</p>
-          </a>
-
-          <a href="jogos/leagueoflegends.html" class="recomendacao-itens">
-              <img src="../assets/img/dashboard/Recomendação/jogo/LeagueOfLegends.jpg" alt="">
-              <p>League Of Legends</p>
-          </a>
-
-          <a href="jogos/valorant.html" class="recomendacao-itens">
-              <img src="../assets/img/dashboard/Recomendação/jogo/valorant.png" alt="">
-              <p>Valorant</p>
-          </a>
-          
-          <a href="jogos/zelda.html" class="recomendacao-itens">
-              <img src="../assets/img/dashboard/Recomendação/jogo/zelda.jpeg" alt="">
-              <p>Zelda</p>
-          </a>
-
-          <a href="jogos/thelastofus.html" class="recomendacao-itens">
-              <img src="../assets/img/dashboard/Recomendação/jogo/thelastofus.png" alt="">
-              <p>The Last Of Us II</p>
-          </a>
-
-      </div>
-
-    </header>
-      
-      <h2>Aqui estão algumas recomendações de filmes e séries para você assistir e escolher algum personagem para fazer Cosplay</h2>
-
-      <header class="header-recomendacao">
-
-        <div class="recomendacao-container">
-  
-            <a href="filmes/vingadores.html" class="recomendacao-itens">
-                <img src="../assets/img/dashboard/Recomendação/filme/vingadores.webp" alt="">
-                <p>Vingadores</p>
-            </a>
-  
-            <a href="filmes/onepiece.html" class="recomendacao-itens">
-                <img src="../assets/img/dashboard/Recomendação/filme/onepiece.jpg" alt="">
-                <p>One Piece</p>
-            </a>
-  
-            <a href="filmes/lacasadepapel.html" class="recomendacao-itens">
-                <img src="../assets/img/dashboard/Recomendação/filme/lacasadepapel.jpg" alt="">
-                <p>La Casa de Papel</p>
-            </a>
-            
-            <a href="filmes/homemaranha.html" class="recomendacao-itens">
-                <img src="../assets/img/dashboard/Recomendação/filme/homemaranha.jpg" alt="">
-                <p>Homem-Aranha</p>
-            </a>
-  
-            <a href="filmes/fnaf.html" class="recomendacao-itens">
-                <img src="../assets/img/dashboard/Recomendação/filme/fnaf.jpg" alt="">
-                <p>Five Nights at Freddy's</p>
-            </a>
-  
+<body>
+    <!-- Barra lateral -->
+    <div class="sidebar">
+        <!-- Perfil do usuário com foto, saudação e nome -->
+        <div class="user-profile">
+            <img id="b_icone" src="../assets/img/profile/icons/ellie.jpg" alt="Foto de Perfil">
+            <p>Olá, <span id="b_usuario">usuário</span>!</p>
         </div>
-  
-      </header>
+        
+        <!-- Lista de navegação -->
+        <ul class="menu-list">
+            <li><a href="dashboard.html">Página Inicial</a></li>
+            <li><a href="toppersonagens.html">Top Personagens</a></li>
+            <li><a href="calculadora.html">Calculadora</a></li>
+            <li><a href="cosplan.html">Cosplan</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+            <li><a href="../index.html" class="sair-btn">Sair</a></li>
+            <!-- Adicione mais itens do menu conforme necessário -->
+        </ul>
+    </div>
 
+    <!-- Conteúdo principal -->
+    <div class="content">
+        <!-- Título de boas-vindas -->
+        <h1>Bem-vindo!</h1>
+        
+        <!-- Seção de recomendações de animes -->
+        <h2>Aqui estão algumas recomendações de animes para você assistir e escolher algum personagem para fazer Cosplay</h2>
 
-  </div>
+        <!-- Container para recomendações de animes -->
+        <header class="header-recomendacao">
+            <div class="recomendacao-container">
+                <!-- Links para páginas específicas de animes com imagens e títulos -->
+                <a href="animes/jujutsu.html" class="recomendacao-itens">
+                    <img src="../assets/img/dashboard/Recomendação/anime/Jujutsu.webp" alt="">
+                    <p>Jujutsu Kaisen</p>
+                </a>
+
+                <a href="animes/bluelock.html" class="recomendacao-itens">
+                    <img src="../assets/img/dashboard/Recomendação/anime/Bluelock.webp" alt="">
+                    <p>Blue Lock</p>
+                </a>
+
+                <a href="animes/yourname.html" class="recomendacao-itens">
+                    <img src="../assets/img/dashboard/Recomendação/anime/YourName.webp" alt="">
+                    <p>Your Name</p>
+                </a>
+
+                <a href="animes/chainsawman.html" class="recomendacao-itens">
+                    <img src="../assets/img/dashboard/Recomendação/anime/ChainsawMan.jpg" alt="">
+                    <p>Chainsaw Man</p>
+                </a>
+
+                <a href="animes/spyxfamily.html" class="recomendacao-itens">
+                    <img src="../assets/img/dashboard/Recomendação/anime/SpyXFamily.png" alt="">
+                    <p>Spy X Family</p>
+                </a>
+            </div>
+        </header>
+
+        <!-- Seção de recomendações de jogos -->
+        <h2>Aqui estão algumas recomendações de jogos para você jogar e escolher algum personagem para fazer Cosplay</h2>
+
+        <!-- Container para recomendações de jogos -->
+        <header class="header-recomendacao">
+            <div class="recomendacao-container">
+                <!-- Links para páginas específicas de jogos com imagens e títulos -->
+                <a href="jogos/danganronpa.html" class="recomendacao-itens">
+                    <img src="../assets/img/dashboard/Recomendação/jogo/Danganronpa.jpg" alt="">
+                    <p>Danganronpa</p>
+                </a>
+
+                <a href="jogos/leagueoflegends.html" class="recomendacao-itens">
+                    <img src="../assets/img/dashboard/Recomendação/jogo/LeagueOfLegends.jpg" alt="">
+                    <p>League Of Legends</p>
+                </a>
+
+                <a href="jogos/valorant.html" class="recomendacao-itens">
+                    <img src="../assets/img/dashboard/Recomendação/jogo/valorant.png" alt="">
+                    <p>Valorant</p>
+                </a>
+
+                <a href="jogos/zelda.html" class="recomendacao-itens">
+                    <img src="../assets/img/dashboard/Recomendação/jogo/zelda.jpeg" alt="">
+                    <p>Zelda</p>
+                </a>
+
+                <a href="jogos/thelastofus.html" class="recomendacao-itens">
+                    <img src="../assets/img/dashboard/Recomendação/jogo/thelastofus.png" alt="">
+                    <p>The Last Of Us II</p>
+                </a>
+            </div>
+        </header>
+
+        <!-- Seção de recomendações de filmes e séries -->
+        <h2>Aqui estão algumas recomendações de filmes e séries para você assistir e escolher algum personagem para fazer Cosplay</h2>
+
+        <!-- Container para recomendações de filmes e séries -->
+        <header class="header-recomendacao">
+            <div class="recomendacao-container">
+                <!-- Links para páginas específicas de filmes e séries com imagens e títulos -->
+                <a href="filmes/vingadores.html" class="recomendacao-itens">
+                    <img src="../assets/img/dashboard/Recomendação/filme/vingadores.webp" alt="">
+                    <p>Vingadores</p>
+                </a>
+
+                <a href="filmes/onepiece.html" class="recomendacao-itens">
+                    <img src="../assets/img/dashboard/Recomendação/filme/onepiece.jpg" alt="">
+                    <p>One Piece</p>
+                </a>
+
+                <a href="filmes/lacasadepapel.html" class="recomendacao-itens">
+                    <img src="../assets/img/dashboard/Recomendação/filme/lacasadepapel.jpg" alt="">
+                    <p>La Casa de Papel</p>
+                </a>
+
+                <a href="filmes/homemaranha.html" class="recomendacao-itens">
+                    <img src="../assets/img/dashboard/Recomendação/filme/homemaranha.jpg" alt="">
+                    <p>Homem-Aranha</p>
+                </a>
+
+                <a href="filmes/fnaf.html" class="recomendacao-itens">
+                    <img src="../assets/img/dashboard/Recomendação/filme/fnaf.jpg" alt="">
+                    <p>Five Nights at Freddy's</p>
+                </a>
+            </div>
+        </header>
+    </div>
+
+    <!-- Script para exibir o nome do usuário e a foto do perfil -->
+    <script>
+        b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+        b_icone.src = sessionStorage.ICONE_USUARIO;
+    </script>
 </body>
+
 </html>
-<script>
-      b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
-      b_icone.src = sessionStorage.ICONE_USUARIO;
-</script>

@@ -1,68 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/cosplan.css">
-  <title>cosKAU - Cosplan</title>
-</head>
-<body>
-  <div class="sidebar">
-    <div class="user-profile">
-      <img id="b_icone" src="../assets/img/profile/icons/ellie.jpg" alt="Foto de Perfil">
-      <p><span id="b_usuario">usuário</span></p>
-    </div>
-    <ul class="menu-list">
-      <li><a href="dashboard.html">Página Inicial</a></li>
-      <li><a href="toppersonagens.html">Top Personagens</a></li>
-      <li><a href="calculadora.html">Calculadora</a></li>
-      <li><a href="cosplan.html">Cosplan</a></li>
-      <li><a href="eventos.html">Eventos</a></li>
-      <li><a href="../index.html" class="sair-btn">Sair</a></li>
-      <!-- Adicione mais itens do menu conforme necessário -->
-    </ul>
-  </div>
-  <div class="content">
-    <div class="banner"></div>
-    <!-- Conteúdo página -->
-    <h1>Cosplan</h1>
-    <section class="section-input">
-      <div class="cosplan-container">
-        <h2>Criar Cosplan</h2>
-  
-        <div class="input-field">
-            <label for="">Nome Personagem:</label>
-            <input type="text" id="input_cosplan_nome" class="cosplan" required>
-        </div>
-  
-        <div class="input-field">
-            <label for="">Franquia:</label>
-            <input type="text" id="input_cosplan_franquia" class="cosplan" required>
-        </div>
-  
-        <div class="input-field">
-            <label for="">Versão:</label>
-            <input type="text" id="input_cosplan_versao" class="cosplan" required>
-        </div>
-  
-        <button id="confirm-button">Criar Cosplan</button>
-  
-        
-      </div>
-  
-      <div class="lista-container">
-        <h2>Lista Cosplan</h2>
-    
-        <button id="delete-button">Deletar Cosplan</button>
-      </div>
-    </section>
-  </div>
 
-  <script src="../js/profileUser.js"></script>
+<head>
+    <!-- Configuração da codificação e configuração de exibição para dispositivos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Link para a folha de estilos do cosplan -->
+    <link rel="stylesheet" href="../css/cosplan.css">
+    <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon">
+
+    <!-- Título da página -->
+    <title>cosKAU - Cosplan</title>
+</head>
+
+<body>
+    <!-- Barra lateral -->
+    <div class="sidebar">
+        <!-- Perfil do usuário com foto e nome -->
+        <div class="user-profile">
+            <img id="b_icone" src="../assets/img/profile/icons/ellie.jpg" alt="Foto de Perfil">
+            <p><span id="b_usuario">usuário</span></p>
+        </div>
+        
+        <!-- Lista de navegação -->
+        <ul class="menu-list">
+            <li><a href="dashboard.html">Página Inicial</a></li>
+            <li><a href="toppersonagens.html">Top Personagens</a></li>
+            <li><a href="calculadora.html">Calculadora</a></li>
+            <li><a href="cosplan.html">Cosplan</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+            <li><a href="../index.html" class="sair-btn">Sair</a></li>
+            <!-- Adicione mais itens do menu conforme necessário -->
+        </ul>
+    </div>
+
+    <!-- Conteúdo principal -->
+    <div class="content">
+        <!-- Banner (pode ser uma imagem ou outro conteúdo) -->
+        <div class="banner"></div>
+        
+        <!-- Título da página Cosplan -->
+        <h1>Cosplan</h1>
+
+        <!-- Seção de entrada para criar e listar cosplans -->
+        <section class="section-input">
+            <!-- Container para criar um novo cosplan -->
+            <div class="cosplan-container">
+                <h2>Criar Cosplan</h2>
+  
+                <!-- Campos de entrada para nome, franquia e versão -->
+                <div class="input-field">
+                    <label for="input_cosplan_nome">Nome Personagem:</label>
+                    <input type="text" id="input_cosplan_nome" class="cosplan" required>
+                </div>
+  
+                <div class="input-field">
+                    <label for="input_cosplan_franquia">Franquia:</label>
+                    <input type="text" id="input_cosplan_franquia" class="cosplan" required>
+                </div>
+  
+                <div class="input-field">
+                    <label for="input_cosplan_versao">Versão:</label>
+                    <input type="text" id="input_cosplan_versao" class="cosplan" required>
+                </div>
+  
+                <!-- Botão para confirmar a criação do cosplan -->
+                <button id="confirm-button">Criar Cosplan</button>
+            </div>
+  
+            <!-- Container para listar os cosplans -->
+            <div class="lista-container">
+                <h2>Lista Cosplan</h2>
+    
+                <!-- Botão para deletar o cosplan selecionado -->
+                <button id="delete-button">Deletar Cosplan</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Script JavaScript para funcionalidades do perfil do usuário e cosplans -->
+    <script src="../js/profileUser.js"></script>
 </body>
+
 </html>
 
 <script>
+  // Evento DOMContentLoaded garante que o código JavaScript só será executado após o carregamento do DOM
   document.addEventListener('DOMContentLoaded', function () {
     const cosplanContainer = document.querySelector('.cosplan-container');
     const listaContainer = document.querySelector('.lista-container');
@@ -72,6 +96,7 @@
     // Array para armazenar os cosplans
     const cosplans = [];
 
+    // Adiciona um ouvinte de eventos ao botão de confirmação
     confirmButton.addEventListener('click', function () {
       // Obtém os valores dos campos de entrada
       const nome = document.getElementById('input_cosplan_nome').value;
@@ -95,6 +120,7 @@
       clearInputFields();
     });
 
+    // Adiciona um ouvinte de eventos ao botão de exclusão
     deleteButton.addEventListener('click', function () {
       // Remove o cosplan selecionado
       const selectedCosplanIndex = cosplans.findIndex(cosplan => cosplan.selected);

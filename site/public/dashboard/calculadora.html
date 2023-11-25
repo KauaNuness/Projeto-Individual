@@ -2,56 +2,72 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>cosKAU - Calculadora de Orçamento</title>
+    <!-- Configuração da codificação e configuração de exibição para dispositivos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título da página -->
+    <title>cosKAU - Calculadora de Orçamento</title>
+    <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon">
 
-  <link rel="stylesheet" href="../css/calculadora.css">
+    <!-- Link para a folha de estilos da calculadora -->
+    <link rel="stylesheet" href="../css/calculadora.css">
 </head>
 
 <body>
 
-  <div class="sidebar">
-    <div class="user-profile">
-      <img id="b_icone" src="../assets/img/profile/icons/ellie.jpg" alt="Foto de Perfil">
-      <p><span id="b_usuario">usuário</span></p>
+    <!-- Barra lateral -->
+    <div class="sidebar">
+        <!-- Perfil do usuário com foto e nome -->
+        <div class="user-profile">
+            <img id="b_icone" src="../assets/img/profile/icons/ellie.jpg" alt="Foto de Perfil">
+            <p><span id="b_usuario">usuário</span></p>
+        </div>
+        
+        <!-- Lista de navegação -->
+        <ul class="menu-list">
+            <li><a href="dashboard.html">Página Inicial</a></li>
+            <li><a href="toppersonagens.html">Top Personagens</a></li>
+            <li><a href="calculadora.html">Calculadora</a></li>
+            <li><a href="cosplan.html">Cosplan</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+            <li><a href="../index.html" class="sair-btn">Sair</a></li>
+            <!-- Adicione mais itens do menu conforme necessário -->
+        </ul>
     </div>
-    <ul class="menu-list">
-      <li><a href="dashboard.html">Página Inicial</a></li>
-      <li><a href="toppersonagens.html">Top Personagens</a></li>
-      <li><a href="calculadora.html">Calculadora</a></li>
-      <li><a href="cosplan.html">Cosplan</a></li>
-      <li><a href="eventos.html">Eventos</a></li>
-      <li><a href="../index.html" class="sair-btn">Sair</a></li>
-      <!-- Adicione mais itens do menu conforme necessário -->
-    </ul>
-  </div>
 
-  
-  <div class="content">
-    <div class="banner"></div>
-    <h1>Calculadora de Orçamento</h1>
+    <!-- Conteúdo principal -->
+    <div class="content">
+        <!-- Banner (pode ser uma imagem ou outro conteúdo) -->
+        <div class="banner"></div>
+        
+        <!-- Título da calculadora -->
+        <h1>Calculadora de Orçamento</h1>
 
-    <label for="nome">Nome do Acessório:</label>
-    <input type="text" id="nome" placeholder="Nome do Acessório">
+        <!-- Formulário para adicionar itens ao orçamento -->
+        <label for="nome">Nome do Acessório:</label>
+        <input type="text" id="nome" placeholder="Nome do Acessório">
 
-    <label for="quantidade">Quantidade:</label>
-    <input type="number" id="quantidade" placeholder="Quantidade">
+        <label for="quantidade">Quantidade:</label>
+        <input type="number" id="quantidade" placeholder="Quantidade">
 
-    <label for="preco">Preço unitário (R$):</label>
-    <input type="number" id="preco" placeholder="Preço unitário em Reais">
+        <label for="preco">Preço unitário (R$):</label>
+        <input type="number" id="preco" placeholder="Preço unitário em Reais">
 
-    <button onclick="calcularOrcamento()">Adicionar Item</button>
+        <!-- Botão para chamar a função calcularOrcamento() -->
+        <button onclick="calcularOrcamento()">Adicionar Item</button>
 
-    <h2>Itens Adicionados:</h2>
-    <ul id="listaItens"></ul>
+        <!-- Títulos e listas para exibir os itens e o total do orçamento -->
+        <h2>Itens Adicionados:</h2>
+        <ul id="listaItens"></ul>
 
-    <h2>Total do Orçamento:</h2>
-    <p id="totalOrcamento">R$ 0,00</p>
-  </div>
+        <h2>Total do Orçamento:</h2>
+        <p id="totalOrcamento">R$ 0,00</p>
+    </div>
 
-  <script src="../js/calculadora.js"></script>
-  <script src="../js/profileUser.js"></script>
+    <!-- Scripts JavaScript para funcionalidades da calculadora e perfil do usuário -->
+    <script src="../js/calculadora.js"></script>
+    <script src="../js/profileUser.js"></script>
 </body>
 
 </html>
