@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <!-- Configurações iniciais, incluindo codificação, viewport, folha de estilos e título da página -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/toppersonagens.css">
@@ -10,11 +11,14 @@
 </head>
 
 <body>
+  <!-- Barra lateral -->
   <div class="sidebar">
+    <!-- Perfil do usuário com foto, saudação e nome -->
     <div class="user-profile">
       <img id="b_icone" src="../assets/img/profile/icons/ellie.jpg" alt="Foto de Perfil">
       <p><span id="b_usuario">usuário</span></p>
     </div>
+    <!-- Lista de navegação -->
     <ul class="menu-list">
       <li><a href="dashboard.html">Página Inicial</a></li>
       <li><a href="toppersonagens.html">Top Personagens</a></li>
@@ -25,28 +29,34 @@
       <!-- Adicione mais itens do menu conforme necessário -->
     </ul>
   </div>
+
+  <!-- Conteúdo principal -->
   <div class="content">
+    <!-- Banner ou imagem de destaque -->
     <div class="banner"></div>
-    <!-- Conteúdo página -->
+
+    <!-- Título da página -->
     <h1>Top Personagens</h1>
 
+    <!-- Container para os gráficos -->
     <div class="grafico">
-
+      <!-- Container para o primeiro gráfico -->
       <div class="myChart">
         <canvas id="myChart"></canvas>
       </div>
-  
+
+      <!-- Container para o segundo gráfico -->
       <div class="myChart2">
         <canvas id="myChart2"></canvas>
       </div>
-
     </div>
 
+    <!-- Scripts necessários, incluindo o que exibe o nome do usuário, a biblioteca Chart.js e o script específico da página -->
+    <script src="../js/profileUser.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/toppersonagens.js"></script>
+  </div>
 
-  <script src="../js/profileUser.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="../js/toppersonagens.js"></script>
 </body>
 
 </html>
-

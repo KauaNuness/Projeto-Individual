@@ -23,7 +23,7 @@ function ButtonCadastrar() {
       return false;
   } else {
       // A função setInterval não parece ter um propósito claro aqui.
-      // Se não for necessário, você pode removê-la.
+      // Se não for necessário, você pode removê-la; entretanto pretendo colocar algo aqui dentro
       // setInterval(5000);
   }
 
