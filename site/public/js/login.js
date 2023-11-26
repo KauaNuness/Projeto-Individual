@@ -39,6 +39,7 @@ function buttonEntrar() {
                 sessionStorage.EMAIL_USUARIO = json.email;
                 sessionStorage.NOME_USUARIO = json.nome;
                 sessionStorage.ICONE_USUARIO = json.icone;
+                sessionStorage.ID_USUARIO = json.idUsuario;
 
                 // Aguarda um breve período (1 segundo) antes de redirecionar para exibir um possível "loading"
                 setTimeout(function () {
@@ -46,6 +47,8 @@ function buttonEntrar() {
                 }, 1000);
             });
         } else {
+            alert("Mensagem de erro: Usuário ou senha incorretos")
+
             // Se houver um erro na resposta, exibe uma mensagem de erro no console
             console.log("Houve um erro ao tentar realizar o login!");
 
