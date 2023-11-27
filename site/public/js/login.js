@@ -39,7 +39,7 @@ function buttonEntrar() {
                 sessionStorage.EMAIL_USUARIO = json.email;
                 sessionStorage.NOME_USUARIO = json.nome;
                 sessionStorage.ICONE_USUARIO = json.icone;
-                sessionStorage.ID_USUARIO = json.idUsuario;
+                sessionStorage.ID_USUARIO = json.id;
 
                 // Aguarda um breve período (1 segundo) antes de redirecionar para exibir um possível "loading"
                 setTimeout(function () {

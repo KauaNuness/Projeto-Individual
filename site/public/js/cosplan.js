@@ -1,10 +1,12 @@
   // Evento DOMContentLoaded garante que o código JavaScript só será executado após o carregamento do DOM
-  document.addEventListener('DOMContentLoaded', function () {
     const cosplanContainer = document.querySelector('.cosplan-container');
     const listaContainer = document.querySelector('.lista-container');
     const confirmButton = document.getElementById('confirm-button');
     const deleteButton = document.getElementById('delete-button');
 
+    var nomeCos = ''
+    var franqCos = ''
+    var versaoCos = ''
     // Array para armazenar os cosplans
     const cosplans = [];
 
@@ -14,6 +16,10 @@
       const nome = document.getElementById('input_cosplan_nome').value;
       const franquia = document.getElementById('input_cosplan_franquia').value;
       const versao = document.getElementById('input_cosplan_versao').value;
+
+      nomeCos = document.getElementById('input_cosplan_nome').value;
+      franqCos = document.getElementById('input_cosplan_franquia').value;
+      versaoCos = document.getElementById('input_cosplan_versao').value;
 
       // Cria um objeto cosplan
       const cosplan = {
@@ -78,4 +84,30 @@
       document.getElementById('input_cosplan_franquia').value = '';
       document.getElementById('input_cosplan_versao').value = '';
     }
-  });
+  ;
+
+  fetch(`/cosplan/criarCosplan/${sessionStorage.getItem('ID_USUARIO')}`, {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      nomeCosplanServer: nomeCos,
+      franquiaServer: franqCos,
+      versaoServer: versaoCos,
+    }),
+})
+    .then(function (resposta) {
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+            // Exibir mensagem de sucesso
+          
+        } else {
+            throw "Houve um erro ao tentar realizar o cadastro!";
+        }
+    })
+    .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+    });
+

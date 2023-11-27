@@ -1,12 +1,12 @@
 var criarProjetoModel = require('../models/createCosplanModel');
 
-function criarProjeto(req, res){
+function criarCosplan(req, res){
     var nomeCosplan = req.body.nomeCosplanSERVER;
     var franquia = req.body.franquiaCosplanSERVER;
     var versao = req.body.versaoCosplanSERVER;
     var idUser = req.params.idUsuario;
 
-    criarProjetoModel.criarProjeto(nomeCosplan,  
+    criarProjetoModel.criarCosplan(nomeCosplan,  
         versao,
         franquia,        
         idUser
@@ -28,4 +28,4 @@ function criarProjeto(req, res){
 
 }
 
-module.exports = { criarProjeto, criaAreaController }
+module.exports = { criarCosplan }

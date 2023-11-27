@@ -9,7 +9,7 @@ router.get('/criarCosplan', function(req, res){
 
 router.post('/criarCosplan/:idUsuario', function(req, res){
     controllerCreateCosplan.criarCosplan(req, res);
-    // controllerCreateCosplan.criaAreaController(req, res);
+
 });
 
 module.exports = router;
