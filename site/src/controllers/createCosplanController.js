@@ -1,18 +1,17 @@
 var criarProjetoModel = require('../models/createCosplanModel');
 
 function criarCosplan(req, res){
-    var nomeCosplan = req.body.nomeCosplanSERVER;
-    var franquia = req.body.franquiaCosplanSERVER;
-    var versao = req.body.versaoCosplanSERVER;
+    var nomeCosplan = req.body.nomeCosplanServer;
+    var franquia = req.body.franquiaServer;
+    var versao = req.body.versaoServer;
     var idUser = req.params.idUsuario;
 
-    criarProjetoModel.criarCosplan(nomeCosplan,  
-        versao,
-        franquia,        
-        idUser
-    )
+    console.log('Controller',nomeCosplan, franquia, versao, idUser)
+
+    criarProjetoModel.criarCosplan(nomeCosplan, versao, franquia, idUser)
     .then(
         function (resultado) {
+            console.log(resultado)
             res.json(resultado);
         }
     ).catch(

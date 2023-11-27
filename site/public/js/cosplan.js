@@ -4,9 +4,7 @@
     const confirmButton = document.getElementById('confirm-button');
     const deleteButton = document.getElementById('delete-button');
 
-    var nomeCos = ''
-    var franqCos = ''
-    var versaoCos = ''
+   
     // Array para armazenar os cosplans
     const cosplans = [];
 
@@ -17,9 +15,36 @@
       const franquia = document.getElementById('input_cosplan_franquia').value;
       const versao = document.getElementById('input_cosplan_versao').value;
 
-      nomeCos = document.getElementById('input_cosplan_nome').value;
-      franqCos = document.getElementById('input_cosplan_franquia').value;
-      versaoCos = document.getElementById('input_cosplan_versao').value;
+      var nomeCos = input_cosplan_nome.value;
+      var franqCos = input_cosplan_franquia.value;
+      var versaoCos = input_cosplan_versao.value;
+      console.log(nomeCos, franqCos, versaoCos)
+
+    fetch(`/cosplan/criarCosplan/${sessionStorage.getItem('ID_USUARIO')}`, {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      nomeCosplanServer: nomeCos,
+      franquiaServer: franqCos,
+      versaoServer: versaoCos
+    }),
+})
+    .then(function (resposta) {
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+            // Exibir mensagem de sucesso
+          
+        } else {
+            throw "Houve um erro ao tentar realizar o cadastro!";
+        }
+    })
+    .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+    });
+
 
       // Cria um objeto cosplan
       const cosplan = {
@@ -86,28 +111,4 @@
     }
   ;
 
-  fetch(`/cosplan/criarCosplan/${sessionStorage.getItem('ID_USUARIO')}`, {
-    method: "POST",
-    headers: {
-        "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      nomeCosplanServer: nomeCos,
-      franquiaServer: franqCos,
-      versaoServer: versaoCos,
-    }),
-})
-    .then(function (resposta) {
-        console.log("resposta: ", resposta);
-
-        if (resposta.ok) {
-            // Exibir mensagem de sucesso
-          
-        } else {
-            throw "Houve um erro ao tentar realizar o cadastro!";
-        }
-    })
-    .catch(function (resposta) {
-        console.log(`#ERRO: ${resposta}`);
-    });
-
+  
