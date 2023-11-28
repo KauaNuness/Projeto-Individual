@@ -1,3 +1,33 @@
+function geraGrafico(resposta){
+    var lista1 = [];
+    var lista2 = [];
+
+    for(var i = 0; i < resposta.length; i++){
+        lista1.push(resposta[i].nome);
+        lista2.push(resposta[i].count);
+    }
+    const ctx2 = document.getElementById('myChart2');
+
+    new Chart(ctx2, {
+      type: 'bar',
+      data: {
+        labels: lista1,
+        datasets: [{
+          label: '# of Votes',
+          data: lista2,
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+}
+
 // Fazendo uma solicitação GET para "/usuarios/grafico"
 fetch("/usuarios/grafico", {
     method: "GET",
@@ -15,6 +45,8 @@ fetch("/usuarios/grafico", {
             resposta.json().then(json => {
                 console.log(json);
                 console.log(JSON.stringify(json));
+
+                geraGrafico(json)
 
                 // Configurando o primeiro gráfico de rosquinha (doughnut)
                 const ctx = document.getElementById('myChart');
@@ -40,7 +72,7 @@ fetch("/usuarios/grafico", {
                     data: {
                         labels: labelctx,
                         datasets: [{
-                            label: '# of Votes',
+                            label: 'Mais Escolhidos como Personagens Favoritos',
                             data: datasetsctx,
                             borderWidth: 1
                         }]
@@ -55,29 +87,8 @@ fetch("/usuarios/grafico", {
                 });
 
                 // Configurando o segundo gráfico de barras (bar)
-                var datasetsctx2 = json.map(function (item) {
-                    return {
-                        label: item.nome,
-                        data: [item.count],
-                        borderWidth: 1
-                    }
-                })
 
-                const ctx2 = document.getElementById('myChart2');
-                new Chart(ctx2, {
-                    type: 'bar',
-                    data: {
-                        labels: ['Mais Escolhidos como Personagens Favoritos'],
-                        datasets: datasetsctx2
-                    },
-                    options: {
-                        scales: {
-                            y: {
-                                beginAtZero: true
-                            }
-                        }
-                    }
-                });
+                
             });
 
         } else {
