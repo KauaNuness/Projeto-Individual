@@ -22,19 +22,47 @@ function ButtonCadastrar() {
         personagemVar == "" ||
         nomeVar == ""
     ) {
-        alert("Mensagem de erro: Campos em branco");
+        Swal.fire({
+            title: "Mensagem de Erro:",
+            text: "Seus campos de cadastro estão em branco",
+            imageUrl: "https://media.tenor.com/o0KWDVtM-bAAAAAC/thinking-emoji.gif",
+            imageWidth: 400,
+            imageHeight: 200,
+            imageAlt: "Custom image"
+          });
         return false;
 
     } else if (!regexEmail.test(emailVar)) {
-        alert("Mensagem de erro: Email inválido faltando o @")
+        Swal.fire({
+            title: "Mensagem de Erro:",
+            text: "Está faltando o @ do seu email",
+            imageUrl: "https://media.tenor.com/o0KWDVtM-bAAAAAC/thinking-emoji.gif",
+            imageWidth: 400,
+            imageHeight: 200,
+            imageAlt: "Custom image"
+          });
         return false
 
     } else if (!regexSenha.test(senhaVar)) {
-        alert("Mensagem de erro: Senha inválida faltando algum número de 0-9")
+        Swal.fire({
+            title: "Mensagem de Erro:",
+            text: "Mensagem de erro: Senha inválida faltando algum número de 0-9",
+            imageUrl: "https://media.tenor.com/o0KWDVtM-bAAAAAC/thinking-emoji.gif",
+            imageWidth: 400,
+            imageHeight: 200,
+            imageAlt: "Custom image"
+          });
         return false
 
     } else if (senhaVar.length < 8) {
-        alert("Mensagem de erro: sua senha tem que ter pelo menos 8 caracteres")
+        Swal.fire({
+            title: "Mensagem de Erro:",
+            text: "Mensagem de erro: sua senha tem que ter pelo menos 8 caracteres",
+            imageUrl: "https://media.tenor.com/o0KWDVtM-bAAAAAC/thinking-emoji.gif",
+            imageWidth: 400,
+            imageHeight: 200,
+            imageAlt: "Custom image"
+          });
         return false
 
     } else {
@@ -62,12 +90,19 @@ function ButtonCadastrar() {
 
             if (resposta.ok) {
                 // Exibir mensagem de sucesso
-                alert("Cadastro Realizado com sucesso");
+                Swal.fire({
+                    title: "Cadastro Realizado",
+                    text: "Seu Cadastro foi realizado com sucesso!",
+                    imageUrl: "https://valorantfiles.com/images/sprays/22ae8535-40b6-95a3-c5b1-98a184b8909f/animation.gif",
+                    imageWidth: 400,
+                    imageHeight: 200,
+                    imageAlt: "Custom image"
+                  });
 
                 // Redirecionar para a página de login após um breve intervalo
                 setTimeout(() => {
                     window.location.href = "login.html";
-                }, 1000);
+                }, 2000);
             } else {
                 throw "Houve um erro ao tentar realizar o cadastro!";
             }

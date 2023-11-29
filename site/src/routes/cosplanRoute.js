@@ -12,4 +12,9 @@ router.post('/criarCosplan/:idUsuario', function(req, res){
 
 });
 
+router.get('/listaCosplan/:idUsuario', function(req, res){
+    controllerCreateCosplan.listaCosplan(req, res);
+
+});
+
 module.exports = router;

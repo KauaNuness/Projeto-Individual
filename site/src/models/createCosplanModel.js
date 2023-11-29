@@ -6,15 +6,17 @@ function criarCosplan(nomeCosplan, versao, franquia, idUsuario){
     `;
     return database.executar(instrucao1);
 }
-function achaCosplan(idUsuario){
+function listaCosplan(idUsuario){
+    console.log(idUsuario)
     if(idUsuario == undefined) return false;
     var instrucao2 = `
-        select idProjeto from projeto where fkUsuario = ${idUsuario};
+    SELECT idCosplan ,nome, franquia, versao FROM cosplan WHERE fkUsuario = ${idUsuario};
     `;
     return database.executar(instrucao2);
 }
 
+
 module.exports = {
     criarCosplan,
-    achaCosplan
+    listaCosplan
 }

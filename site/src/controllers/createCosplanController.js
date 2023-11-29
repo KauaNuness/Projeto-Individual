@@ -27,4 +27,28 @@ function criarCosplan(req, res){
 
 }
 
-module.exports = { criarCosplan }
+function listaCosplan(req, res){
+    var idUser = req.params.idUsuario; 
+
+
+        criarProjetoModel.listaCosplan(idUser)
+            .then(
+                function (resultadolistaCosplan){
+                    console.log(`Resultados: ${JSON.stringify(resultadolistaCosplan)}`);
+    
+                    if (resultadolistaCosplan.length > 0) {
+                        console.log(resultadolistaCosplan);
+                        res.status(200).json(resultadolistaCosplan);
+                        
+                    } else {
+                        res.status(404).send("A lista está vazia");
+                    }
+    
+                }
+            )
+
+}
+
+module.exports = { 
+criarCosplan,
+listaCosplan }
